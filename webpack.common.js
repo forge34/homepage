@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-
   entry: {
 
     app: './src/index.js',
@@ -18,7 +17,7 @@ module.exports = {
 
         test: /\.css$/i,
 
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader',"html-loader"],
 
       },
       {
@@ -40,9 +39,10 @@ module.exports = {
   plugins: [
 
     new HtmlWebpackPlugin({
-
+      loader:"html-loader",
+      filename:"index.html",
       title: 'Title',
-      template:'./src/html/index.html'
+      template:'./src/html/index.template.html'
 
     }),
 
