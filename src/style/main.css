@@ -21,7 +21,7 @@
 }
 
 .about-info {
-    max-width: 800px;
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -35,7 +35,7 @@
 }
 
 .myimg {
-    max-width: 250px;
+    max-width: 350px;
     margin-right: 1em;
     margin-bottom: 1em;
     box-shadow: var(--shadow);
@@ -158,7 +158,23 @@
     }
 
     .fimg-src {
-        max-width: 250px;
+        min-width: 250px;
+        max-width: 450px;
         margin-left: 0;
     }
+}
+
+@media (max-width:1279px) and (min-width:768px){
+
+    .myimg {
+        position: relative;
+        z-index: 2;
+    }
+    .card-container {
+        grid-template-areas: 
+        "c1 c2"
+        "c3 c4"
+        "c5 c6"
+        ;
+    }   
 }
